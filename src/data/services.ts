@@ -1,0 +1,48 @@
+export const services = [
+  {
+    slug: "elderly-care", name: "Elderly Care Services", shortName: "Elderly care", icon: "heart",
+    image: "/images/elderly-care.webp", alt: "A caregiver offering a senior woman a cup of tea", 
+    description: "A helping hand, a listening ear, and thoughtful support for the everyday.",
+    intro: "Everyday care, with dignity at its heart.",
+    detail: "Familiar routines and personal preferences matter. Phoenix offers elderly care assistance for families looking for practical, compassionate support for their loved ones at home.",
+    support: ["Personal assistance with everyday routines", "Companionship and attentive everyday support", "Support that considers family preferences", "Discussion of suitable help at home"],
+    note: "Share the type of daily assistance needed, preferred timings and location. We will confirm what support can be arranged.",
+  },
+  {
+    slug: "home-nursing", name: "Home Nursing Services", shortName: "Home nursing", icon: "stethoscope",
+    image: "/images/home-nursing.webp", alt: "A nurse discussing care with an older man at home",
+    description: "Nursing support in familiar surroundings, shaped around your care requirements.",
+    intro: "Professional support. Familiar surroundings.",
+    detail: "When your family is considering nursing support at home, a clear conversation is the first step. Phoenix will discuss the patient’s needs and confirm support within the agency’s verified capabilities.",
+    support: ["Discussion of your home nursing requirements", "Support subject to staff qualifications", "Coordination around your family’s preferences", "Confirmation of service scope before care begins"],
+    note: "Specific nursing tasks must be confirmed with the team and, where appropriate, the treating clinician. Availability and suitability are assessed before arranging care.",
+  },
+  {
+    slug: "personal-care", name: "Personal Care Assistance", shortName: "Personal care", icon: "hand",
+    image: "/images/personal-care.webp", alt: "A support worker gently assisting a senior adult",
+    description: "Respectful assistance with personal routines, at a pace that feels comfortable.",
+    intro: "A little support. A more comfortable day.",
+    detail: "Personal care is personal. We start by understanding the individual’s preferences and the everyday activities where assistance would be helpful, with respect for comfort and dignity.",
+    support: ["Assistance with everyday personal care activities", "Attention to individual preferences", "Help with familiar daily routines", "Family discussion of boundaries and needs"],
+    note: "Describe the activities where help is needed. The team will confirm the type of assistance available and any limitations before you proceed.",
+  },
+  {
+    slug: "household-support", name: "Household Support", shortName: "Household support", icon: "home",
+    image: "/images/household-support.webp", alt: "A caregiver helping an older woman in her home",
+    description: "Practical help around the home to make everyday living a little easier.",
+    intro: "Thoughtful help for the place you call home.",
+    detail: "A comfortable home supports everyday wellbeing. Phoenix can discuss appropriate household assistance for people receiving home care, based on the tasks your family needs help with.",
+    support: ["Discussion of everyday household assistance", "Practical support alongside home care", "Help aligned with the household’s routines", "A clearly agreed scope of assistance"],
+    note: "Share the household tasks you have in mind. Specific tasks, timings and service availability need to be agreed with the team.",
+  },
+  {
+    slug: "nursing-support", name: "Nursing Support", shortName: "Nursing support", icon: "cross",
+    image: "/images/nursing-support.webp", alt: "A nursing professional supporting an older adult",
+    description: "Talk to us about nursing-related assistance and the support available for your family.",
+    intro: "Start with a conversation about care.",
+    detail: "Care requirements are different for every family. Phoenix can help you understand available nursing-related support and discuss whether it is appropriate for your situation.",
+    support: ["A conversation about your support needs", "Confirmation of relevant staff qualifications", "Discussion of suitable service arrangements", "Clarity about availability and scope"],
+    note: "Nursing-related support is subject to staff qualifications and service availability. Specific procedures are not confirmed through this website.",
+  },
+] as const;
+export type Service = (typeof services)[number];

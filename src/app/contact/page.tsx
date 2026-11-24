@@ -1,0 +1,10 @@
+import Link from "next/link";
+import { MapPin, Phone, Instagram } from "lucide-react";
+import { Eyebrow, WhatsAppLink, Photo } from "@/components/ui";
+import { EnquiryForm } from "@/components/enquiry-form";
+import { business } from "@/data/business";
+import { pageMetadata } from "@/lib/seo";
+export const metadata = pageMetadata("Contact Phoenix Home Healthcare", "Call or WhatsApp +91 63749 30178 to discuss home nursing, elderly care and equipment support. Based in Urapakkam, Chennai, Tamil Nadu.", "/contact");
+export default function ContactPage() {
+  return <><section className="contact-heading"><div className="container"><Eyebrow>WE’RE HERE TO LISTEN</Eyebrow><h1>Let’s talk about<br />your family’s care.</h1><p className="lead">A question, a concern, or a place to start.<br />Reach out in the way that feels easiest for you.</p></div></section><section className="section contact-section"><div className="container contact-layout"><div className="contact-details"><div className="contact-detail"><Phone/><div><h2>Give us a call</h2><a href={business.phoneHref}>{business.phone}</a><p>Discuss the support you’re looking for.</p></div></div><div className="contact-detail"><MapPin/><div><h2>Based in Urapakkam, Chennai</h2><address>{business.address}</address><a className="text-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.address)}`} target="_blank" rel="noopener noreferrer">View address on Google Maps</a><p>Please contact us before visiting.</p></div></div><WhatsAppLink>Start a WhatsApp Conversation</WhatsAppLink><a className="contact-instagram" href={business.instagram} target="_blank" rel="noopener noreferrer"><Instagram size={18}/>Connect with Phoenix on Instagram</a><Photo src="/images/elderly-care.webp" alt="A caregiver sharing tea with an older woman"/><p className="small-note">For your privacy, please share only the details needed to discuss a service. Read our <Link href="/privacy">enquiry privacy information</Link>.</p></div><EnquiryForm/></div></section></>;
+}
